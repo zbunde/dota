@@ -1,0 +1,7 @@
+devolpment:
+ adapter: postgresql
+ host: localhost
+ database: dota
+ username: postgres
+ password: postgres
+ encoding: unicode
