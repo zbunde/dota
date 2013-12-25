@@ -1,0 +1,14 @@
+<h1>Search Results</h1>
+<table>
+	<thead>
+		<th>Name</th>
+	</thead>
+	<tbody>
+		<% @heroes.each do |hero| %>
+			<tr>
+				<td><%= hero.name %> </td>
+			  <td><%= link_to "Edit", edit_hero_path(hero) %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

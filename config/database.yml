@@ -1,4 +1,4 @@
-devolpment:
+development:
  adapter: postgresql
  host: localhost
  database: dota

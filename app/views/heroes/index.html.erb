@@ -1,0 +1,29 @@
+<h1>A list of all Heroes in Dota 2</h1>
+<table>
+	<thead>
+		<th>Name</th>
+		<th></th>
+		<th></th>
+	</thead>
+	<tbody>
+		<% heroes.each do |hero| %>
+			<tr>
+			  <td>
+			    <%= link_to hero.name, hero %>
+			  </td>
+			  <td><%= image_tag hero.thumbnail.url %></td>
+			  <td>
+			  	<%= link_to "Edit", edit_hero_path(hero) %>
+			  </td>
+			  <td>
+			  	<%= link_to "Delete", hero, method: :delete, confirm: "Are you sure?" %>
+			  </td>
+			</tr>  
+		<% end %>
+	</tbody>
+</table>
+<%= link_to "Add Hero", new_hero_path %>
+<div class="navbar">
+		<%= form_for :search, url: searches_path do |form| %>
+			<%= form.text_field :name %>
+		<% end %>

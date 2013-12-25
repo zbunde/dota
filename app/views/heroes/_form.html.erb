@@ -1,0 +1,34 @@
+<%= form_for @hero do |form| %>
+  <table>
+    <tr>
+      <td><%= form.label :name %></td>
+      <td>
+        <%= form.text_field :name %>
+      </td>
+    </tr>
+    <tr>
+      <td><%= form.label :summary %></td>
+      <td>
+        <%= form.text_area :summary, rows: 6, cols: 100 %>
+      </td>
+    </tr>
+    <tr>
+      <td><%= form.label :hero_type %></td>
+      <td>
+       <%= form.select :hero_type, 
+       options_for_select(["Carry", "Support", "Mid", "Offlane"]), 
+       prompt: "Choose a Hero Type" %>
+      </td>
+    </tr>
+    <tr>
+      <td><%= form.label :thumbnail %></td>
+      <td><%= form.file_field :thumbnail %></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <%= form.submit "Save" %>
+      </td>
+    </tr>
+  </table>
+<% end %>

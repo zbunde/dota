@@ -1,0 +1,12 @@
+<h1>Dota 2 Heroes</h1>
+	<p>This is a database for accessing all of the heroes in Defense of the Ancients 2</p>
+		<p>To Search by individual heroes type name here</p>
+		<div class="navbar">
+		<%= form_for :search, url: searches_path do |form| %>
+			<%= form.text_field :name %>
+		<% end %>
+	</div>
+	<%= link_to "All Heroes", heroes_path %>
+	<%= link_to "Create Account", sign_up_path %>
+	<%= link_to "New Draft", new_draft_path %>
+	<%= link_to "Login", users_path %>
