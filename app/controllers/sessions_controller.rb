@@ -5,16 +5,16 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if params[:logion][:email_address].present &&
-      params[:login][:password].present?
+    if params[:login][:email].present &&
+       params[:login][:password].present?
 
-      @user = User.find_by_email_address (params[:login][:email_address])
+      @user = User.find_by_email (params[:login][:email])
 
       if @user.nil?
         redirect_to new_user_path, notice: "Account does not exist"
       end
     else
-      if @user.authenticate(params[:login][:email_address])
+      if @user.authenticate(params[:login][:email])
         session[:user_id] = @user.id #lets user remember they are logged in
         redirect_to heroes_path, notice: "User Logged in Succesfully"
 

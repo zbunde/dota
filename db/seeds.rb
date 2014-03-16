@@ -14,14 +14,14 @@ Hero.create! \
   summary: "Razzil Darkbrew the Alchemist is a melee strength hero who utilises his alchemical prowess as a strange but versatile fighter. He is an unusual carry based upon transmuting fallen enemies into large amounts of bonus gold, with both an early game and late game presence due to his large health pool and the first strike nature of his spells. His balanced statistics and the sure promise of gold for items means he can be one of the most disparately built heroes in the game. Unstable Concoction is his main contribution early on, dealing good damage and a lengthy stun. Acid Spray allows him to rapidly clear waves of creeps for his Greevil's Greed to contribute massive amounts of extra income. A well-equipped Alchemist can then use Chemical Rage to its fullest effect, as the incredible regeneration and base attack time reduction make it one of the best steroid abilities in the game."
 
 Hero.create! \
-  filename: open(images_path.join("ancient-apparition.png")),
+  thumbnail: open(images_path.join("ancient-apparition.png")),
   number: 3,
   name: "Ancient-Apparition",
   hero_type: "Support",
   summary: "Kaldr the Ancient Apparition is a ranged intelligence hero. This spell-caster elemental being possesses high range, great attributes and strong semi-spammable spells. He is commonly played as a ganker or support role and due to his high agility and an attack enhancing spell, he can be played as a Semi-Carry too. His ultimate is one of the most devastating spells in the game as it can hit multiple units, has global range, freezes health regeneration, and instantly kill units if low on life."
 
 Hero.create! \
-  filename: open(images_path.join("anti-mage.png")),
+  thumbnail: open(images_path.join("anti-mage.png")),
   number: 4,
   name: "Anti-Mage",
   hero_type: "Carry,",
@@ -29,10 +29,17 @@ Hero.create! \
 
   
 Hero.create! \
-  filename: open(images_path.join("axe.png")),
+  thumbnail: open(images_path.join("axe.png")),
   number: 5,
   name: "Axe",
   hero_type: "Carry,",
   summary: "Mogul Khan the Axe is a savage melee strength hero, infamous for creating chaos in battle and thriving off of it. He is commonly played as an initiator with a large semi-carry presence that quickly transitions into a support role later in the game. His fighting style demands that he gets up close and very personal. He can taunt enemies into targeting him and counters those who try to strike him with a sweeping Counter Helix that slashes all enemies at melee range. Axe has a tendency to draw opponents so deep in the fight that they do not have a chance to escape, each soul he draws infusing his own love of war; his ultimate, Culling Blade bolsters that talent with an attack that unconditionally kills a unit with low health."
 
 
+User.create! \
+  username: "zbunde",
+  first_name: "zachary",
+  last_name: "klabunde",
+  email: "zbunde@gmail.com",
+  password: zachary,
+  password_confirmation: zachary
