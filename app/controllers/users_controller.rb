@@ -1,22 +1,18 @@
 class UsersController < ApplicationController
+  helper_method :users, :user
+  respond_to :html
 
   def new
     @user = User.new
   end
 
   def create
-    @user = User.new
-    @user.username = params[:username]
-    @user.first_name = params[:first_name]
-    @user.last_name = params[:last_name]
-    @user.email = params[:email]
-    @user.password = params[:password]
-    @user.password_confirmation = params[:password_confirmation]
-
+    @user = User.create(user_params)
+  end
 
     if @user.save
       session[:logged_in_user_id] = @user.id
-      redirect_to heroes_path, notice: "User Created"
+      redirect_to users_path, notice: "User Created"
     else
       redirect_to root_path, notice: "User cannot be created"
     end
@@ -40,11 +36,18 @@ class UsersController < ApplicationController
 
 
   def index
-    @user = User.order("id")
+    @users = User.order("id")
     redirect_to users_path
   end
 
-  private
+
+  def users
+    @_users ||= User.all
+  end
+
+  def user
+    @_user ||= User.find(params[:id])
+  end
 
   def user_params
    params.require(:username).permit(:first_name, :last_name, :email, :password, :password_confirmation)
@@ -59,4 +62,3 @@ class UsersController < ApplicationController
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
  end
-end

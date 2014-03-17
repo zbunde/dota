@@ -2,8 +2,10 @@ Dota::Application.routes.draw do
   root to: 'pages#show', id: 'home'
   resources :heroes
   resources :searches, only: [:show, :create]
-  resources :users, only: [:index, :create, :new]
+  resources :users, only: [:index, :create, :new, :show]
   resources :drafts, only: [:create, :new, :show, :edit, :index]
+  resources :sessions, only: [:create, :new, :destroy]
+
 
   get 'sign_up' => 'users#new'
 
@@ -17,4 +19,6 @@ Dota::Application.routes.draw do
     as: "reset_password"
   post "/users/reset_password" => "users#reset_password_post",
     as: "reset_password_post"
+  get "/sessions/index" => "sessions#index",
+    as: "login"
 end

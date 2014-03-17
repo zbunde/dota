@@ -1,6 +1,6 @@
     <b>Name</b>
     <br>
-     <%= hero.name %>
+    <%= hero.name %>
     </p>
     <p>
       <b>Summary</b>
@@ -12,11 +12,12 @@
     </p>
 
     <p><%= link_to "New", new_hero_path %> </p>
-    
+
     <p><%= link_to "Back", heroes_path %> </p>
 
-    <p><div class="navbar">
-    <%= form_for :search, url: searches_path do |form| %>
-      <%= form.text_field :name %>
-    <% end %>
-  </p>
+    <p> <div class="navbar">
+      <%= form_for :search, url: searches_path do |form| %>
+        <%= form.text_field :name %>
+      <% end %>
+    </p>
+

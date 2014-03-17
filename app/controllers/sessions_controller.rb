@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
   end
 
   def create
+
     if params[:login][:email].present &&
        params[:login][:password].present?
 
@@ -23,6 +24,10 @@ class SessionsController < ApplicationController
       end
 
     end
+  end
+
+  def show
+      @session = Users.all
   end
 
   def destroy
