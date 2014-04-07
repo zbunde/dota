@@ -5,7 +5,7 @@ Dota::Application.routes.draw do
   resources :users, only: [:index, :create, :new, :show]
   resources :drafts, only: [:create, :new, :show, :edit, :index]
   resources :sessions, only: [:create, :new, :destroy]
-
+  resources :user_searches, only: [:show, :create]
 
   get 'sign_up' => 'users#new'
 
@@ -20,5 +20,5 @@ Dota::Application.routes.draw do
   post "/users/reset_password" => "users#reset_password_post",
     as: "reset_password_post"
   get "/sessions/index" => "sessions#index",
-    as: "login"
+    as: "new"
 end

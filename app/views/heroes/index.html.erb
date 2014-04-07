@@ -24,6 +24,7 @@
 </table>
 <%= link_to "Add Hero", new_hero_path %>
 <div class="navbar">
-		<%= form_for :search, url: searches_path do |form| %>
+		Search Heroes <%= form_for :search, url: searches_path do |form| %>
 			<%= form.text_field :name %>
 		<% end %>
+</div>

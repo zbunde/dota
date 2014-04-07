@@ -1,11 +1,13 @@
 <h1>New Draft</h1>
 <table>
-	<tbody>
-		<% @heroes.each do |hero| %>
-			<tr>
-			  <td> <button name="hero_id" value="<%= hero.id %>"> <%= image_tag hero.thumbnail.url, width: 50, height: 50 %> </button></td>
-		<% end %>
-	</tbody>
+  <tbody>
+  <% @heroes.each do |hero| %>
+    <tr>
+      <td>
+        <button name="hero_id" value="<%= hero.id %>"> <%= image_tag hero.thumbnail.url, width: 50, height: 50 %> </button>
+      </td>
+  <% end %>
+  </tbody>
 </table>
 
 

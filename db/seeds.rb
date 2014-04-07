@@ -1,4 +1,5 @@
 images_path = Rails.root.join("hero_images")
+
 Hero.create! \
   thumbnail: open(images_path.join("abaddon.png")),
   number: 1,

@@ -1,23 +1,26 @@
-    <b>Name</b>
-    <br>
-    <%= hero.name %>
-    </p>
-    <p>
-      <b>Summary</b>
-      <br>
-      <%= hero.summary %>
-    </p>
-    <p>Image
-      <button name="hero_id" value="<%= hero.id %>"> <%= image_tag hero.thumbnail.url, width: 100, height: 100 %> </button>
-    </p>
+<b>Name</b>
+<br>
+<%= hero.name %>
 
-    <p><%= link_to "New", new_hero_path %> </p>
+<p>
+  <b>Summary</b>
+  <br>
+  <%= hero.summary %>
+</p>
+<p>Image
+  <button name="hero_id" value="<%= hero.id %>"> <%= image_tag hero.thumbnail.url, width: 100, height: 100 %> </button>
+</p>
 
-    <p><%= link_to "Back", heroes_path %> </p>
+<p><%= link_to "New", new_hero_path %> </p>
 
-    <p> <div class="navbar">
-      <%= form_for :search, url: searches_path do |form| %>
-        <%= form.text_field :name %>
-      <% end %>
-    </p>
+<p><%= link_to "Back", heroes_path %> </p>
+
+
+<div class="navbar">
+  <%= form_for :search, url: searches_path do |form| %>
+    <%= form.text_field :name %>
+  <% end %>
+
+
+
 

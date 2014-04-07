@@ -18,7 +18,7 @@ class HeroesController < ApplicationController
 	def update
 		@hero = hero
 		hero.update_attributes(hero_params)
-		respond_with hero
+		respond_with @hero
 	end
 
 	def destroy
