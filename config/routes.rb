@@ -21,4 +21,5 @@ Dota::Application.routes.draw do
     as: "reset_password_post"
   get "/sessions/index" => "sessions#index",
     as: "new"
+
 end
