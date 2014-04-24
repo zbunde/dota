@@ -5,3 +5,4 @@ development:
  username: postgres
  password: postgres
  encoding: unicode
+

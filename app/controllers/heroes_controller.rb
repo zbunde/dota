@@ -1,7 +1,11 @@
 class HeroesController < ApplicationController
 	helper_method :heroes, :hero
 	respond_to :html
-
+  def index
+    if session[:user_id]
+      @user =  @user = User.find(session[:user_id])
+    end
+  end
 	def new
 		@hero = Hero.new
 	end

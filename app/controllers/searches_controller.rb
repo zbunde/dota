@@ -6,5 +6,9 @@ class SearchesController < ApplicationController
 	
 	def show
 		@heroes = Search.new(params[:id]).heroes
-	end
+    if session[:user_id]
+    @user = User.find(session[:user_id])
+  end
+
+  end
 end
