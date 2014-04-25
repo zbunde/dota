@@ -15,13 +15,6 @@ test:
  password: postgres
  encoding: unicode
 
-production:
- adapter: postgresql
- host: localhost
- database: dota_draft_production
- username: postgres
- password: postgres
- encoding: unicode
 
 
 
