@@ -1,5 +1,5 @@
 require File.expand_path('../boot', __FILE__)
-
+config.secret_key_base = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]['secret_key_base']
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
