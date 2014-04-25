@@ -1,4 +1,3 @@
-config.secret_key_base = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]['secret_key_base']
 
 require File.expand_path('../boot', __FILE__)
 require 'rails/all'
