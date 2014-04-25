@@ -5,7 +5,6 @@ development:
  username: postgres
  password: postgres
  encoding: unicode
- secret_key_base: f88b03c0fe655e5ba19bed5934ef6857f1413d58051d316d164bdbd4d9ef3eb16411634b0fed3dd513830a7207dfdca887e7c38a1222039127b67306ed52cd7a
 
 
 test:
@@ -23,7 +22,6 @@ production:
  username: postgres
  password: postgres
  encoding: unicode
- secret_key_base: 5775b66541be8e0e4d5eb4395eea350d928d576c1a557050b51120e243833883055f4183478aff193a7d20eaa9674a5807b7f75a2a4e8137e0d0b74ff0e1bbb0
 
 
 
