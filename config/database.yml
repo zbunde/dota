@@ -18,7 +18,7 @@ test:
 production:
  adapter: postgresql
  host: localhost
- database:
+ database: dota_draft_production
  username: postgres
  password: postgres
  encoding: unicode
