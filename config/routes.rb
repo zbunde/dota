@@ -2,9 +2,9 @@ Dota::Application.routes.draw do
    root to: 'pages#index'
 
    get '/login', to: 'sessions#new'
-   post '/sessions/create', to: 'sessions#create'
-   get '/session/logout', to: 'sessions#delete'
-   post '/session/logout', to: 'sessions#delete'
+   post '/login', to: 'sessions#create'
+   get '/logout', to: 'sessions#delete'
+   post 'logout', to: 'sessions#delete'
 
   resources :heroes
   resources :searches, only: [:show, :create]

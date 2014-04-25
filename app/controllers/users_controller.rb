@@ -6,9 +6,9 @@ class UsersController < ApplicationController
 
   def index
     if session[:user_id]
-      @user = User.find(session[:user_id])
+      @user_id = User.find(session[:user_id])
     end
-    else session[:user_id] = nil
+      redirect_to '/', notice: "Users only can access this page"
   end
 
   def new
@@ -21,7 +21,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "User Created"
     else
-      render :new, notice: "User not created"
+     @error = "Account not created"
+      render :new
     end
   end
   def show
@@ -38,7 +39,7 @@ class UsersController < ApplicationController
   end
 
   def user
-    @_user ||= User.find(params[:id])
+    User.find(params[:id])
   end
 
 

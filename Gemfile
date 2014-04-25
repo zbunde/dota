@@ -13,7 +13,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'paperclip'
 gem 'pry', :group => :development
-gem 'pry-plus'
+gem 'rspec-rails', '~> 2.14.2', :group => :test
+gem 'capybara', '2.2.1', :group => :test
+gem 'pry-plus', :group => :development
+
 
 group :doc do
 

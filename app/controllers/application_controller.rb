@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def index
 
-    @user = User.find(session[:user_id])
+    @user_id = User.find(session[:user_id])
 
   end
 

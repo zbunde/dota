@@ -6,7 +6,7 @@ class UserSearchesController < ApplicationController
 
   def show
     if session[:user_id]
-      @user = User.find(session[:user_id])
+      @user_id = User.find(session[:user_id])
     end
     @users = UserSearch.new(params[:id]).users
   end

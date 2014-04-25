@@ -1,28 +1,25 @@
 <h1>Dota 2 Heroes</h1>
 
-<%= @user.email if !@user.nil?  %>
+
 
 <p>This is a database for accessing all of the heroes in Defense of the Ancients 2</p>
 <ul>
   <li><%= link_to "All Heroes", heroes_path %></li>
 
-  <% if @user.nil? %>
+  <% if @user_id.nil? %>
   <li> <%= link_to "Create Account", sign_up_path %></li>
     <% end %>
-  <% if @user %>
+  <% if @user_id %>
   <li>  <%= link_to "New Draft", new_draft_path %></li>
   <li>  <%= link_to "All Users", users_path %></li>
     <% end %>
-  <% if @user.nil? %>
+  <% if @user_id.nil? %>
   <li>  <%= link_to "Login", login_path %></li>
     <% end %>
-
-
-
 </ul>
 <br>
 
-<% if @user %>
+<% if @user_id %>
 <p> To search for users type username here: </p>
 <div class="navbar">
   <%= form_for :user_search, url: user_searches_path do |form| %>

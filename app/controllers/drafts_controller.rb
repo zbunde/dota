@@ -1,8 +1,9 @@
 class DraftsController < ApplicationController
 	def new
     if session[:user_id]
-      @user = User.find(session[:user_id])
+      @user_id = User.find(session[:user_id])
     end
+
 		@draft = Draft.new
     @heroes = Hero.all
 
@@ -12,8 +13,8 @@ class DraftsController < ApplicationController
 
 	def create
     @heroes = Hero.all
-		@draft        = Draft.create(@heroes)
-	  if @draft.save == true
+		@draft  = Draft.create(@heroes)
+	  if @draft.save
       flash[:success] = "Your draft has been saved"
 			redirect_to heroes_path and return
     else

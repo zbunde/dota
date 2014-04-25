@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<%= notice %>
+
 <head>
 
   <title>Dota</title>
@@ -11,10 +11,11 @@
 </head>
 
 <body>
+<%= notice %>
+<% if @user_id %>
+  <li>Welcome, <%= @user_id.email  %></li>
+  <li> <%= link_to "Logout", logout_path %></li>
 
-<% if @user %>
-  <li> <%= link_to "Logout", session_logout_path %></li>
-  <%= @user.email  %>
 <% end %>
 
 

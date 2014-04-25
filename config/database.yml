@@ -6,3 +6,13 @@ development:
  password: postgres
  encoding: unicode
 
+test:
+ adapter: postgresql
+ host: localhost
+ database: dota_test
+ username: postgres
+ password: postgres
+ encoding: unicode
+
+
+
