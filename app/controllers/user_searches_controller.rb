@@ -7,7 +7,9 @@ class UserSearchesController < ApplicationController
   def show
     if session[:user_id]
       @user_id = User.find(session[:user_id])
-    end
-    @users = UserSearch.new(params[:id]).users
+      @users = UserSearch.new(params[:id]).users
+    else
+   redirect_to '/', notice: "Only Users can access this page"
   end
+end
 end

@@ -15,7 +15,7 @@ Dota::Application.routes.draw do
 
   get 'sign_up' => 'users#new'
 
-  get ':id' => 'pages#show'
+
   
   get  "/users/forgot_password" => "users#forgot_password",
     as: "forgot_password"
