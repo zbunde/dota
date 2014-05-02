@@ -1,3 +1,5 @@
+
+
 class UsersController < ApplicationController
   helper_method :users, :user
   respond_to :html
@@ -21,7 +23,6 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "User Created"
     else
-     @error = "Account not created"
       render :new
     end
   end
@@ -31,7 +32,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :first_name, :last_name, :email, :password)
+    params.require(:user).permit(:username, :first_name, :last_name, :email, :password_digest)
   end
 
   def users

@@ -1,3 +1,6 @@
 <h1>Add a Hero</h1>
+<% @hero.errors.full_messages.each do |error| %>
+  <li><%= error %></li>
+<% end %>
 
 <%= render 'form' %>

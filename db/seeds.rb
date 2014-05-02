@@ -42,4 +42,6 @@ User.create! \
   first_name: "zachary",
   last_name: "klabunde",
   email: "zbunde@gmail.com",
-  password: "zachary"
+  password: "zachary",
+  password_digest: "zachary"
+

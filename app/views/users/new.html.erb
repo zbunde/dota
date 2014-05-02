@@ -1,5 +1,10 @@
+<% @user.errors.full_messages.each do |error| %>
+  <li><%= error %></li>
+<% end %>
+
+
 <%= form_for @user do |form| %>
-  <%= @error %>
+
 <h1>Create Account</h1>
  <table>
     <tr>
@@ -7,8 +12,8 @@
       <td><%= form.text_field :username %></td>
     </tr>
     <tr>
-      <td><%= form.label :password %></td>
-      <td><%= form.password_field :password %> </td>
+      <td><%= form.label :password%></td>
+      <td><%= form.password_field :password_digest %> </td>
     </tr>
     <tr>
       <td><%= form.label :first_name %>

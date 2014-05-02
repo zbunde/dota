@@ -11,8 +11,12 @@ class HeroesController < ApplicationController
 	end
 
 	def create
-		@hero = Hero.create(hero_params)
+
+     if  @hero = Hero.create(hero_params)
 		respond_with @hero
+     else
+    render :new
+    end
 	end
 
 	def edit

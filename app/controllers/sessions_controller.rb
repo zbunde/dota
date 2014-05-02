@@ -11,10 +11,9 @@ class SessionsController < ApplicationController
 
     if email.strip.empty? || current_user == nil
       redirect_to login_path, notice: "Email or password were incorrect"
-    elsif password.strip.empty?
-      @notice = "Password cannot be empty"
-      render :new
-    elsif current_user.password == password
+
+    elsif current_user.password_digest == password
+
       session[:user_id] = current_user.id
       redirect_to '/'
     else
@@ -28,3 +27,4 @@ class SessionsController < ApplicationController
     redirect_to root_path, notice: "You have succesfully logged out"
   end
 end
+
