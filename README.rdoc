@@ -1,3 +1,24 @@
+
+
+
 {<img src="https://codeclimate.com/github/zbunde/dota.png" />}[https://codeclimate.com/github/zbunde/dota]
 
 {<img src="https://travis-ci.org/zbunde/dota.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/zbunde/dota]
+
+
+
+
+
+This is an application that simulates the drafting portion
+of dota2(a free PC game)
+
+Currently users can register and create, show, update and delete heroes.
+
+The draft portion is currently in development.
+
+
+Pivitol Tracker: https://www.pivotaltracker.com/n/projects/1075392
+Production: http://dota-draft-production.herokuapp.com/
+Staging: http://dota-draft-staging.herokuapp.com/
+
+
