@@ -18,7 +18,9 @@ The draft portion is currently in development.
 
 
 Pivitol Tracker: https://www.pivotaltracker.com/n/projects/1075392
+
 Production: http://dota-draft-production.herokuapp.com/
+
 Staging: http://dota-draft-staging.herokuapp.com/
 
 
