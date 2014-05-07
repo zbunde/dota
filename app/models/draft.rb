@@ -56,6 +56,7 @@ class Draft < ActiveRecord::Base
   def advance?
     @bans_for_user1.length == @bans_for_user2.length
   end
+  
 end
 
 
