@@ -1,1 +1,3 @@
 {<img src="https://codeclimate.com/github/zbunde/dota.png" />}[https://codeclimate.com/github/zbunde/dota]
+
+{<img src="https://travis-ci.org/zbunde/dota.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/zbunde/dota]
